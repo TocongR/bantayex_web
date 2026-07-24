@@ -11,7 +11,7 @@ const Footer = () => {
         </Link>
         <div className={styles.right}>
           <Link to="/about" className={styles.link}>About this project</Link>
-          <p className={styles.tagline}>Vision-based proctored exams for the classroom.</p>
+          <p className={styles.tagline}>Vision-based proctored exams.</p>
         </div>
       </div>
     </footer>
