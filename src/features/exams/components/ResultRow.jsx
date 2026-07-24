@@ -49,10 +49,10 @@ export default function ResultRow({ result, expanded, onToggle, passingScore }) 
 
       {expanded && (
         <div className={styles.details}>
-          <div className={styles.infoGrid}>
+          {/* <div className={styles.infoGrid}>
             <InfoItem label="Auto-submitted" value={result.autoSubmitted ? 'Yes' : 'No'} />
             <InfoItem label="Gaze monitoring" value={result.gazeMonitoringEnabled ? 'Enabled' : 'Disabled'} />
-          </div>
+          </div> */}
 
           {result.violationLog?.length > 0 && (
             <div>
