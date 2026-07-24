@@ -12,8 +12,8 @@ import DashboardPage from '../pages/DashboardPage';
 import ExamsListPage from '../features/exams/ExamsListPage';
 import CreateExamPage from '../features/exams/CreateExamPage';
 import EditExamPage from '../features/exams/EditExamPage';
-// import ExamDetailPage from '../features/exams/ExamDetailPage';
-// import ExamResultsPage from '../features/exams/ExamResultsPage';
+import ExamDetailPage from '../features/exams/ExamDetailPage';
+import ExamResultsPage from '../features/exams/ExamResultsPage';
 import NotFoundPage from '../pages/NotFoundPage';
 
 const AppRoutes = () => {
@@ -34,9 +34,9 @@ const AppRoutes = () => {
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/exams" element={<ExamsListPage />} />
           <Route path="/exams/create" element={<CreateExamPage />} />
-          {/* <Route path="/exams/:id" element={<ExamDetailPage />} /> */}
+          <Route path="/exams/:id" element={<ExamDetailPage />} />
           <Route path="/exams/:id/edit" element={<EditExamPage />} />
-          {/* <Route path="/exams/:id/results" element={<ExamResultsPage />} /> */}
+          <Route path="/exams/:id/results" element={<ExamResultsPage />} />
         </Route>
       </Route>
 
