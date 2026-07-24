@@ -1,0 +1,97 @@
+.shell {
+  transition: padding-right 0.3s ease-out;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+.backBtn:hover {
+  color: #111827;
+}
+
+.assistantToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  border: 1px solid #9ca3af;
+  border-radius: var(--radius-lg);
+  padding: 8px 16px;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+.assistantToggle:hover {
+  color: #111827;
+  transform: scale(1.03);
+}
+.assistantToggle:active {
+  transform: scale(0.95);
+}
+
+.assistantToggleHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: var(--font-semibold);
+  color: #111827;
+  margin: 0 0 40px 0;
+}
+
+.panel {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-out;
+}
+
+.panelOpen {
+  transform: translateX(0);
+}
+
+.panelClosed {
+  transform: translateX(100%);
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .shellShifted {
+    padding-right: 26rem;
+  }
+  .panel {
+    inset: auto;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 26rem;
+  }
+}

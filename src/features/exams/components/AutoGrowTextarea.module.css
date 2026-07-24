@@ -1,0 +1,7 @@
+.autoGrow {
+  resize: none;
+  overflow: hidden;
+  line-height: 1.5;
+  transition: height 0.15s ease-out;
+  
+}

@@ -1,0 +1,77 @@
+.page {
+  max-width: 896px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.newExamBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #111827;
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.newExamBtn:hover {
+  background: #1f2937;
+}
+
+.loading {
+  text-align: center;
+  padding: 96px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.recentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.viewAllBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #4b5563;
+  cursor: pointer;
+}
+.viewAllBtn:hover {
+  color: #111827;
+}
+
+@media (min-width: 768px) {
+  .statGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

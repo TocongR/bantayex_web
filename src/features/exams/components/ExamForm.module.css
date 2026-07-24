@@ -1,0 +1,143 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.errorText {
+  font-size: 14px;
+  color: #ef4444;
+  margin: 0;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #9ca3af;
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #111827;
+  box-sizing: border-box;
+}
+.input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.fieldHint {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.codeRow {
+  display: flex;
+  gap: 12px;
+}
+
+.codeInput {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #9ca3af;
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #111827;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.codeInput:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.generateBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #9ca3af;
+  border-radius: var(--radius-lg);
+  padding: 14px 20px;
+  font-size: 14px;
+  color: #374151;
+  background: #fff;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+.generateBtn:hover {
+  background: #f9fafb;
+}
+.generateBtn:active {
+  transform: scale(0.95);
+}
+.generateBtn:active .generateIcon {
+  transform: rotate(180deg);
+}
+
+.generateIcon {
+  transition: transform 0.5s ease;
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.availabilityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.questionList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.addQuestionBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #374151;
+  border: 1px solid #9ca3af;
+  border-radius: var(--radius-lg);
+  padding: 8px 16px;
+  margin-top: 24px;
+  background: #fff;
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.addQuestionBtn:hover {
+  color: #111827;
+}
+.addQuestionBtn:active {
+  transform: scale(0.95);
+}
+
+.submitBtn {
+  width: 100%;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}

@@ -1,0 +1,13 @@
+.section {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 80px 32px;
+}
+
+.compact {
+  padding: 64px 32px;
+}
+
+.divider {
+  border-top: 1px solid #f3f4f6;
+}

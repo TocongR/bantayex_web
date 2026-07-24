@@ -1,0 +1,123 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 12px;
+  margin: 0 -12px;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.row:hover {
+  background: #f9fafb;
+}
+
+.code {
+  border-radius: var(--radius-lg);
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  background: #111827;
+  color: #fff;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 600;
+  color: #111827;
+  font-size: 16px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.metaText {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.dateText {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 2px 0 0 0;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: #4b5563;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.actionBtn:hover {
+  color: #111827;
+}
+
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: #f87171;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.deleteBtn:hover {
+  color: #dc2626;
+}
+
+.chevron {
+  display: none;
+  color: #d1d5db;
+}
+
+.divider {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 640px) {
+  .chevron {
+    display: block;
+  }
+}

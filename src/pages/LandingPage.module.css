@@ -1,0 +1,235 @@
+.eyebrowDot {
+  font-size: 12px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: var(--font-semibold);
+  line-height: 1.05;
+  margin-bottom: 24px;
+  max-width: 640px;
+  color: #fff;
+}
+
+.heroBody {
+  font-size: 18px;
+  color: #9ca3af;
+  max-width: 420px;
+  margin-bottom: 40px;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.secondaryCta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.secondaryCta:hover {
+  color: #fff;
+}
+
+.sectionTitle {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  gap: 40px 48px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  font-size: 30px;
+  font-weight: var(--font-semibold);
+  color: #d1d5db;
+}
+
+.itemHeading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.iconAccent {
+  color: var(--color-primary);
+}
+
+.itemTitle {
+  font-weight: var(--font-semibold);
+  color: #111827;
+  font-size: 16px;
+  margin: 0;
+}
+
+.itemTitleTight {
+  font-weight: var(--font-semibold);
+  color: #111827;
+  font-size: 16px;
+  margin: 0 0 6px 0;
+}
+
+.itemBody {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.featuresHead {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.featuresHeadNote {
+  font-size: 14px;
+  color: #6b7280;
+  max-width: 380px;
+}
+
+.breakDesktop {
+  display: none;
+}
+
+.iconBox {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBoxIcon {
+  color: #374151;
+}
+
+.downloadCard {
+  background: #030712;
+  border-radius: 24px;
+  padding: 64px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.downloadInner {
+  position: relative;
+  z-index: 10;
+}
+
+.downloadTitle {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.downloadBody {
+  color: #9ca3af;
+  max-width: 420px;
+  margin: 0 auto 40px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.downloadActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.downloadNote {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 24px;
+}
+
+.ctaRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.ctaTitle {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: 12px;
+}
+
+.ctaBody {
+  font-size: 14px;
+  color: #6b7280;
+  max-width: 420px;
+}
+
+.ctaButtonShrink {
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 60px;
+  }
+  .downloadTitle {
+    font-size: 36px;
+  }
+  .breakDesktop {
+    display: block;
+  }
+  .featuresHead {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .ctaRow {
+    flex-direction: row;
+    align-items: center;
+  }
+}

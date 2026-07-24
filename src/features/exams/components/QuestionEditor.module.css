@@ -1,0 +1,119 @@
+.card {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.cardNoBorder {
+  border-bottom: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: #111827;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconBtn {
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.iconBtn:hover:not(:disabled) {
+  color: #111827;
+}
+.iconBtn:active:not(:disabled) {
+  transform: scale(0.9);
+}
+.iconBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.deleteIconBtn {
+  composes: iconBtn;
+}
+.deleteIconBtn:hover {
+  color: #ef4444;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.questionInput {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #9ca3af;
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #111827;
+  box-sizing: border-box;
+}
+.questionInput:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.addOptionBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #374151;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.addOptionBtn:hover {
+  color: #111827;
+}
+.addOptionBtn:active {
+  transform: scale(0.95);
+}
+
+.hint {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}

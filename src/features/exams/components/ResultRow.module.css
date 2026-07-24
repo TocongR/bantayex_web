@@ -1,0 +1,157 @@
+.card {
+  border: 1px solid #9ca3af;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.summary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease;
+}
+.summary:hover {
+  background: #f9fafb;
+}
+
+.nameCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 2px 0 0 0;
+}
+
+.scoreCol {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.score {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.passLine {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.badgePassed {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+  padding: 4px 12px;
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.badgeFailed {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+  padding: 4px 12px;
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.violationFlag {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #d97706;
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: #6b7280;
+}
+
+.details {
+  padding: 4px 20px 20px 20px;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  font-size: 14px;
+}
+
+.infoLabel {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.infoValue {
+  color: #111827;
+  margin: 2px 0 0 0;
+}
+
+.logHeading {
+  font-size: 12px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 8px 0;
+}
+
+.logList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.logRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+}
+
+.logType {
+  color: #374151;
+}
+
+.logTime {
+  color: #6b7280;
+  font-size: 12px;
+}

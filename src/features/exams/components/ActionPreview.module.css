@@ -1,0 +1,108 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.scrollable {
+  max-height: 288px;
+  overflow-y: auto;
+}
+
+.groupLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 4px 0;
+}
+
+.groupLabelGreen {
+  color: #16a34a;
+}
+.groupLabelAmber {
+  color: #d97706;
+}
+.groupLabelRed {
+  color: #ef4444;
+}
+.groupLabelBlue {
+  color: #2563eb;
+}
+
+.settingsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #374151;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.settingKey {
+  color: #6b7280;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.updateList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.updateItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.before {
+  opacity: 0.5;
+}
+
+.microLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 4px 0;
+}
+
+.microLabelAmber {
+  color: #d97706;
+}
+
+.goneNotice {
+  font-size: 12px;
+  color: #6b7280;
+  font-style: italic;
+  padding: 6px 10px;
+  margin: 0;
+}
+
+.reorderList {
+  font-size: 12px;
+  color: #374151;
+  background: #fff;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  padding: 10px 10px 10px 24px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reorderMissing {
+  color: #6b7280;
+  font-style: italic;
+}

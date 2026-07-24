@@ -1,0 +1,42 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 24px;
+}
+
+.card {
+  background: #fff;
+  width: 100%;
+  max-width: 384px;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-weight: 600;
+  color: #111827;
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+.message {
+  font-size: 14px;
+  color: #4b5563;
+  margin: 0 0 32px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.flex {
+  flex: 1;
+  justify-content: center;
+}

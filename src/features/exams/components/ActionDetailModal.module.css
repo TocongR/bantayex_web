@@ -1,0 +1,108 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 512px;
+  width: 100%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.closeBtn {
+  flex-shrink: 0;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+.closeBtn:hover {
+  color: #111827;
+}
+.closeBtn:active {
+  transform: scale(0.9);
+}
+
+.body {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.footer {
+  display: flex;
+  gap: 8px;
+  padding: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.applyBtn {
+  flex: 1;
+  background: #111827;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+.applyBtn:hover {
+  background: #1f2937;
+}
+.applyBtn:active {
+  transform: scale(0.95);
+}
+
+.discardBtn {
+  flex: 1;
+  background: #fff;
+  color: #4b5563;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+.discardBtn:hover {
+  background: #f9fafb;
+}
+.discardBtn:active {
+  transform: scale(0.95);
+}

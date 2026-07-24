@@ -1,0 +1,144 @@
+.wrap {
+  border-top: 1px solid #f3f4f6;
+  padding: 12px;
+  flex-shrink: 0;
+}
+
+.attachment {
+  background: #f9fafb;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.attachmentRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+}
+
+.attachmentName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.previewToggle {
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-size: 12px;
+}
+.previewToggle:hover {
+  color: #111827;
+}
+
+.removeBtn {
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.removeBtn:hover {
+  color: #ef4444;
+}
+
+.attachmentPreview {
+  white-space: pre-wrap;
+  max-height: 160px;
+  overflow-y: auto;
+  border-top: 1px solid #9ca3af;
+  padding: 8px 12px;
+  font-size: 11px;
+  color: #4b5563;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.attachBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  padding: 10px;
+  color: #4b5563;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+.attachBtn:hover:not(:disabled) {
+  background: #f9fafb;
+}
+.attachBtn:active:not(:disabled) {
+  transform: scale(0.9);
+}
+.attachBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.textarea {
+  flex: 1;
+  resize: none;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #111827;
+  max-height: 128px;
+  box-sizing: border-box;
+}
+.textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.sendBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111827;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+.sendBtn:hover:not(:disabled) {
+  background: #1f2937;
+  transform: scale(1.05);
+}
+.sendBtn:active:not(:disabled) {
+  transform: scale(0.9);
+}
+.sendBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.sendBtn:disabled:hover {
+  transform: none;
+}

@@ -1,0 +1,71 @@
+.page {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 32px;
+  transition: color 0.15s ease;
+}
+.backBtn:hover {
+  color: #111827;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.codeLine {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 40px 0;
+}
+
+.centerNote {
+  text-align: center;
+  padding: 80px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.errorBox {
+  border: 1px dashed #fecaca;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #ef4444;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.emptyBox {
+  border: 1px dashed #9ca3af;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.resultList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

@@ -1,0 +1,35 @@
+.wrapper {
+  margin-bottom: var(--space-4);
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #9ca3af;
+  border-radius: var(--radius-lg);
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.inputError {
+  border-color: var(--color-danger);
+}
+
+.error {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--color-danger);
+}

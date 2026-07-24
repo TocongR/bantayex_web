@@ -1,0 +1,25 @@
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.value {
+  font-size: 14px;
+  color: #111827;
+  margin: 0;
+}
+
+.mono {
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
