@@ -147,7 +147,7 @@ const LandingPage = () => {
             </p>
             <div className={styles.downloadActions}>
               <LinkButton
-                href="https://github.com/TocongR/bantayex_mobile/releases/download/v1.0.0/bantayex.apk"
+                href="https://github.com/TocongR/BantayEx-SmartProctoringExamApp/releases/download/v1.0.2/BantayEx.apk"
                 download
                 variant="light"
                 size="lg"
