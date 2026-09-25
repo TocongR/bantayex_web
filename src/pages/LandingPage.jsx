@@ -66,9 +66,7 @@ const LandingPage = () => {
           watch themselves.
         </h2>
         <p className={styles.heroBody}>
-          BantayEx pairs a simple web dashboard for professors with a mobile app that uses
-          on-device computer vision to track a student's gaze and keep them honest — no human
-          proctor required.
+          BantayEx is a mobile app that helps monitor students during online exams by checking where they are looking and detecting when their attention moves away from the screen.
         </p>
         <div className={styles.heroActions}>
           <LinkButton href="#download" variant="light" size="lg" uppercase>
