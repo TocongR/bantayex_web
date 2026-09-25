@@ -60,10 +60,6 @@ const LandingPage = () => {
   return (
     <>
       <GradientHero>
-        <p className={styles.eyebrowDot}>
-          <span className={styles.dot} />
-          Vision-based proctoring
-        </p>
         <h2 className={styles.heroTitle}>
           Exams that
           <br />
