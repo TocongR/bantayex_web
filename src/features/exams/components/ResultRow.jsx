@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, AlertTriangle, ImageOff } from 'lucide-react';
 import { formatDate, formatViolationType } from '../lib/formatters';
 import { useViolationProofs } from '../lib/useViolationProofs';
-import ProofLightbox from './ProofLightbox';
+import ProofLightbox from './ProofLightBox';
 import styles from './ResultRow.module.css';
 
 function InfoItem({ label, value }) {

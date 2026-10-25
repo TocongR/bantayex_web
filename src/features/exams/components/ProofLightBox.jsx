@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
-import styles from './ProofLightbox.module.css';
+import styles from './ProofLightBox.module.css';
 
 /** Full-size evidence viewer. Closes on backdrop click, the X button, or Escape. */
 export default function ProofLightbox({ preview, onClose }) {
