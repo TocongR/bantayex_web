@@ -8,7 +8,7 @@ import styles from './LandingPage.module.css';
 
 const steps = [
   {
-    n: '01',
+    n: '05',
     title: 'Build the exam on the web',
     body: 'Professors write questions, set a time limit and passing score, and schedule when the exam opens — all from the BantayEx dashboard.',
     icon: MonitorCheck,
