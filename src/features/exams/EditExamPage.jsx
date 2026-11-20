@@ -15,6 +15,11 @@ export default function EditExamPage() {
   const [fetching, setFetching] = useState(true);
   const [serverError, setServerError] = useState('');
 
+  function handleChange(nextState) {
+    setServerError('');
+    setExamState(nextState);
+  }
+
   useEffect(() => {
     getDoc(doc(db, 'exams', id)).then((snap) => {
       if (snap.exists()) setExamState(emptyExamState(snap.data()));
@@ -37,7 +42,7 @@ export default function EditExamPage() {
       navigate(`/exams/${id}`);
     } catch (err) {
       console.error(err);
-      alert('Failed to update exam. Please try again.');
+      setServerError('Failed to update exam. Please try again.');
     }
     setLoading(false);
   }
@@ -60,11 +65,11 @@ export default function EditExamPage() {
       backLabel="Back to Exam"
       onBack={() => navigate(`/exams/${id}`)}
       examState={examState}
-      onChangeExamState={setExamState}
+      onChangeExamState={handleChange}
     >
       <ExamForm
         value={examState}
-        onChange={setExamState}
+        onChange={handleChange}
         onSubmit={handleSubmit}
         submitLabel="Save Changes"
         loading={loading}

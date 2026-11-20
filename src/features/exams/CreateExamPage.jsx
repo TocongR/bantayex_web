@@ -15,6 +15,11 @@ export default function CreateExamPage() {
   const [serverError, setServerError] = useState('');
   const [examState, setExamState] = useState(() => emptyExamState());
 
+  function handleChange(nextState) {
+    setServerError('');
+    setExamState(nextState);
+  }
+
   async function handleSubmit(data) {
     setServerError('');
     setLoading(true);
@@ -34,7 +39,7 @@ export default function CreateExamPage() {
       navigate('/dashboard');
     } catch (err) {
       console.error(err);
-      alert('Failed to save exam. Please try again.');
+      setServerError('Failed to save exam. Please try again.');
     }
     setLoading(false);
   }
@@ -45,11 +50,11 @@ export default function CreateExamPage() {
       backLabel="Dashboard"
       onBack={() => navigate('/dashboard')}
       examState={examState}
-      onChangeExamState={setExamState}
+      onChangeExamState={handleChange}
     >
       <ExamForm
         value={examState}
-        onChange={setExamState}
+        onChange={handleChange}
         onSubmit={handleSubmit}
         submitLabel="Create Exam"
         loading={loading}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { RefreshCw } from 'lucide-react';
 import { generateCode } from '../lib/codeGenerator';
 import { newId, emptyQuestion, flattenExamState, moveQuestion, MIN_OPTIONS } from '../lib/examState';
@@ -7,13 +7,25 @@ import AutoGrowTextarea from './AutoGrowTextarea';
 import FormSection from './FormSection';
 import QuestionEditor from './QuestionEditor';
 import Button from '../../../components/ui/Button';
+import ErrorMessage from '../../../components/ui/ErrorMessage';
 import styles from './ExamForm.module.css';
 
 // value: the shared exam state (see lib/examState.js)
 // onChange: (nextValue) => void — called on every edit
 // onSubmit: (flattenedPayload) => void — called on valid submit
 export default function ExamForm({ value, onChange, onSubmit, submitLabel = 'Save Exam', loading, serverError }) {
-  const [error, setError] = useState('');
+  const [error, setError] = useState(null);
+  const [submitAttempt, setSubmitAttempt] = useState(0);
+  const errorRef = useRef(null);
+  const fieldId = error?.fieldId;
+  const errorMessage = error?.message || serverError;
+
+  useEffect(() => {
+    if (!errorMessage) return;
+    errorRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (fieldId) document.getElementById(fieldId)?.focus({ preventScroll: true });
+  }, [errorMessage, fieldId, submitAttempt]);
+
   const {
     title,
     description,
@@ -27,6 +39,7 @@ export default function ExamForm({ value, onChange, onSubmit, submitLabel = 'Sav
   } = value;
 
   function patch(fields) {
+    setError(null);
     onChange({ ...value, ...fields });
   }
 
@@ -92,18 +105,23 @@ export default function ExamForm({ value, onChange, onSubmit, submitLabel = 'Sav
     e.preventDefault();
     const validationError = validateExamState(value);
     setError(validationError);
+    setSubmitAttempt((n) => n + 1);
     if (validationError) return;
     onSubmit(flattenExamState(value));
   }
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      {error && <p className={styles.errorText}>{error}</p>}
-      {!error && serverError && <p className={styles.errorText}>{serverError}</p>}
+      {errorMessage && (
+        <div ref={errorRef} tabIndex={-1} className={styles.errorWrapper}>
+          <ErrorMessage message={errorMessage} />
+        </div>
+      )}
 
       <FormSection label="Exam Details">
         <div className={styles.stack}>
           <input
+            id="exam-title"
             type="text"
             placeholder="Exam Title"
             value={title}
@@ -125,6 +143,7 @@ export default function ExamForm({ value, onChange, onSubmit, submitLabel = 'Sav
       >
         <div className={styles.codeRow}>
           <input
+            id="exam-code"
             type="text"
             value={examCode}
             onChange={(e) => patch({ examCode: e.target.value.toUpperCase().slice(0, 6) })}
@@ -154,6 +173,7 @@ export default function ExamForm({ value, onChange, onSubmit, submitLabel = 'Sav
           <div>
             <label className={styles.fieldLabel}>Passing Score</label>
             <input
+              id="passing-score"
               type="number"
               min={0}
               max={questions.length}
@@ -175,6 +195,7 @@ export default function ExamForm({ value, onChange, onSubmit, submitLabel = 'Sav
           <div>
             <label className={styles.fieldLabel}>Date</label>
             <input
+              id="exam-date"
               type="date"
               required
               value={availableDate}
@@ -185,6 +206,7 @@ export default function ExamForm({ value, onChange, onSubmit, submitLabel = 'Sav
           <div>
             <label className={styles.fieldLabel}>From</label>
             <input
+              id="exam-from"
               type="time"
               required
               value={availableFrom}
@@ -195,6 +217,7 @@ export default function ExamForm({ value, onChange, onSubmit, submitLabel = 'Sav
           <div>
             <label className={styles.fieldLabel}>To</label>
             <input
+              id="exam-to"
               type="time"
               required
               value={availableTo}
@@ -210,6 +233,8 @@ export default function ExamForm({ value, onChange, onSubmit, submitLabel = 'Sav
           {questions.map((q, idx) => (
             <QuestionEditor
               key={q.id}
+              id={`question-${idx}`}
+              tabIndex={-1}
               question={q}
               index={idx}
               isFirst={idx === 0}
@@ -228,7 +253,12 @@ export default function ExamForm({ value, onChange, onSubmit, submitLabel = 'Sav
           ))}
         </div>
 
-        <button type="button" onClick={addQuestion} className={styles.addQuestionBtn}>
+        <button
+          id="add-question"
+          type="button"
+          onClick={addQuestion}
+          className={styles.addQuestionBtn}
+        >
           + Add Question
         </button>
       </FormSection>

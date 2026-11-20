@@ -19,9 +19,10 @@ export default function QuestionEditor({
   onChangeOption,
   onRemoveOption,
   onSetCorrect,
+  ...rest
 }) {
   return (
-    <FadeIn delay={delay} className={`${styles.card} ${isLastInList ? styles.cardNoBorder : ''}`}>
+    <FadeIn delay={delay} className={`${styles.card} ${isLastInList ? styles.cardNoBorder : ''}`} {...rest}>
       <div className={styles.header}>
         <span className={styles.number}>{index + 1}</span>
         <span className={styles.label}>Question {index + 1}</span>
